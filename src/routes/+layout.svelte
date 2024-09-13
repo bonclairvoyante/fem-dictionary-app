@@ -9,7 +9,7 @@
 
 	import Moon from '$lib/components/Moon.svelte';
 	// import { ModeWatcher } from 'mode-watcher';
-	import { themeChange } from 'theme-change';
+	// import { themeChange } from 'theme-change';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import LightSwitch from '$lib/components/LightSwitch.svelte';
