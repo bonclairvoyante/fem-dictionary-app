@@ -69,6 +69,9 @@ importers:
       svelte-check:
         specifier: ^3.6.0
         version: 3.8.5(postcss-load-config@4.0.2(postcss@8.4.41))(postcss@8.4.41)(svelte@4.2.18)
+      svelte-loading-spinners:
+        specifier: ^0.3.6
+        version: 0.3.6
       tailwindcss:
         specifier: ^3.4.9
         version: 3.4.9
@@ -1524,6 +1527,9 @@ packages:
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
+
+  svelte-loading-spinners@0.3.6:
+    resolution: {integrity: sha512-mthHQ2TwiwzTWzbFry3CBnVEfzqPOD9WkVw84OfSYzHRq6N9wgQ+yv37u81uPeuLU/ZOIPqhujpXquB1aol5ZQ==}
 
   svelte-parse-markup@0.1.5:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
@@ -3080,6 +3086,8 @@ snapshots:
   svelte-hmr@0.16.0(svelte@4.2.18):
     dependencies:
       svelte: 4.2.18
+
+  svelte-loading-spinners@0.3.6: {}
 
   svelte-parse-markup@0.1.5(svelte@4.2.18):
     dependencies:

@@ -10,8 +10,7 @@
 	import Moon from '$lib/components/Moon.svelte';
 	// import { ModeWatcher } from 'mode-watcher';
 	// import { themeChange } from 'theme-change';
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
+
 	import LightSwitch from '$lib/components/LightSwitch.svelte';
 
 	let word = '';
@@ -25,7 +24,6 @@
 	</div>
 	<div class="flex navbar-end gap-y-4">
 		<div class="menu menu-horizontal">
-			<label for="font-selector"></label>
 			<select class="outline-none border-none bg-inherit">
 				<option value="sans">Sans</option>
 				<option value="serif">Serif</option>
@@ -57,6 +55,7 @@
 			<!-- Use CSS for form validation -->
 			<input
 				id="search"
+				name="search"
 				class="input input-bordered w-full rounded-lg"
 				autocomplete="off"
 				required
