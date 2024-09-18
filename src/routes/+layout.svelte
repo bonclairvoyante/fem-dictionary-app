@@ -5,16 +5,15 @@
 	import '@fontsource-variable/inter';
 	// Supports weights 400-700
 	import '@fontsource-variable/lora';
+
 	import '../app.css';
 
 	import Moon from '$lib/components/Moon.svelte';
-	// import { ModeWatcher } from 'mode-watcher';
-	// import { themeChange } from 'theme-change';
-
-	import LightSwitch from '$lib/components/LightSwitch.svelte';
+	import Lightswitch from '$lib/components/Lightswitch.svelte';
+	import Fontselector from '$lib/components/Fontselector.svelte';
 
 	let word = '';
-	let empty = false;
+	// let empty = false;
 </script>
 
 <!-- <svelte:head><ModeWatcher /></svelte:head> -->
@@ -23,18 +22,14 @@
 		<enhanced:img src="/src/lib/assets/images/logo.svg" alt="dictionary-logo" />
 	</div>
 	<div class="flex navbar-end gap-y-4">
-		<div class="menu menu-horizontal">
-			<select class="outline-none border-none bg-inherit">
-				<option value="sans">Sans</option>
-				<option value="serif">Serif</option>
-				<option value="mono">Mono</option>
-			</select>
-		</div>
+		
+			
+		
+		<Fontselector />
 	</div>
 	<hr class="h-6 w-[1px] bg-zinc-300 dark:bg-zinc-100" />
-
 	<div class="px-2">
-		<LightSwitch />
+		<Lightswitch />
 	</div>
 
 	<Moon />
@@ -46,7 +41,7 @@
 			on:submit={(e) => {
 				if (!word) {
 					e.preventDefault();
-					empty = true;
+					// empty = true;
 				}
 			}}
 			action="/{word}"
