@@ -11,12 +11,31 @@
 	import Moon from '$lib/components/Moon.svelte';
 	import Lightswitch from '$lib/components/Lightswitch.svelte';
 	import Fontselector from '$lib/components/Fontselector.svelte';
+	import { ModeWatcher } from 'mode-watcher';
+
 
 	let word = '';
-	// let empty = false;
+	let empty = false;
 </script>
 
-<!-- <svelte:head><ModeWatcher /></svelte:head> -->
+<svelte:head>
+<style>
+	body {
+		font-family: system-ui, -apple-system;
+	}
+	body:has(option[value='sans']:checked) {
+		font-family: 'Inter Variable', sans-serif;
+	}
+	body:has(option[value='serif']:checked) {
+		font-family: 'Lora Variable', serif;
+	}
+	body:has(option[value='mono']:checked) {
+		font-family: 'Inconsolata Variable', monospace;
+	}
+</style>
+
+<ModeWatcher />
+</svelte:head>
 <nav class="navbar flex md:px-36">
 	<div class="navbar-start">
 		<enhanced:img src="/src/lib/assets/images/logo.svg" alt="dictionary-logo" />
@@ -41,7 +60,7 @@
 			on:submit={(e) => {
 				if (!word) {
 					e.preventDefault();
-					// empty = true;
+					empty = true;
 				}
 			}}
 			action="/{word}"
