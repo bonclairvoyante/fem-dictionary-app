@@ -18,7 +18,13 @@
 	let empty = false;
 </script>
 
+
 <svelte:head>
+	<title>
+		Lexi Hub
+	</title>
+	<meta name="description" content="Your friendly English Language dictionary." />
+	
 <style>
 	body {
 		font-family: system-ui, -apple-system;
@@ -56,6 +62,7 @@
 
 <section>
 	<div class="flex justify-center items-center pt-32">
+
 		<form
 			on:submit={(e) => {
 				if (!word) {
@@ -67,6 +74,7 @@
 			class="relative p-3 w-full max-w-lg text-base"
 		>
 			<!-- Use CSS for form validation -->
+			<label for="search" class="text-xs text-gray-600">Type your word</label>
 			<input
 				id="search"
 				name="search"
@@ -74,9 +82,10 @@
 				autocomplete="off"
 				required
 				bind:value={word}
+				
 			/>
 
-			<button type="submit" class="absolute right-3 top-6 w-6 h-6">
+			<button type="submit" class="absolute right-3 top-12 w-6 h-6">
 				<enhanced:img src="/src/lib/assets/images/icon-search.svg" alt="icon-search" />
 			</button>
 		</form>
