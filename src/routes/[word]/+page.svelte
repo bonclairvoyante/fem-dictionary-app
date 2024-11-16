@@ -106,7 +106,7 @@
 	</ul>
 
 	<hr class="h-0.5 bg-white-300 dark:bg-black-100 opacity-100 border-0 mt-8 sm:mt-10 mb-5" />
-	<hr class="border-border mb-5 dark:border-border-dark mt-8 sm:mt-10 mb-5" />
+	<hr class="border-border dark:border-border-dark mt-8 sm:mt-10 mb-5" />
 
 	{#if definition.sourceUrls.length}
 		<div class="flex flex-col sm:flex-row sm:mx-28" aria-label="source url">
